@@ -14,7 +14,15 @@ function onSubmit(e) {
         msg.innerHTML = 'Please enter all fields';
         setTimeout(() => msg.remove(), 300)
     } else {
-        console.log('success');
+        // console.log('success');
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+
+        userList.appendChild(li);
+
+        //clear fields
+        nameInput.value = '';
+        emailInput.value = ''; 
     }
     
 }
