@@ -9,6 +9,12 @@ myform.addEventListener('submit', onSubmit);
 function onSubmit(e) {
     e.preventDefaul();
 
-    if
+    if(nameInput.value === '' || emailInput.value === '' ){
+        msg.classList.add('error');
+        msg.innerHTML = 'Please enter all fields';
+        setTimeout(() => msg.remove(), 300)
+    } else {
+        console.log('success');
+    }
     
 }
